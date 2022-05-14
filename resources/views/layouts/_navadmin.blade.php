@@ -10,6 +10,5 @@
             {{ csrf_field() }}
         </form>
     @endauth  
-    vnjdihcvihvhi
 </ul>
    
