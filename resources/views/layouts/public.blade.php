@@ -2,15 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
-        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
+        <title>HomeSweetHome | @yield('title', 'Homepage')</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
                 <div id="logo">
-                    <h1><a href="">ACME S.p.A  </a></h1>
-                    <p>i migliori prodotti alla portata di un click</p>
+                    <h1><a href="">CASA </a></h1>
+                    <p>case facili</p>
                 </div>
             </div>
 
