@@ -195,15 +195,15 @@ a:hover {
 #page {
 	width: 968px;
 	margin: 0 auto;
-	background: url(images/img05.jpg) repeat-y left top;
+	background: #a65e2e;
 }
 
 #page-bgtop {
-	background: url(images/img04.jpg) no-repeat left top;
+	background: #a65e2e;
 }
 
 #page-bgbtm {
-	background: url(images/img06.jpg) no-repeat left bottom;
+	background: #a65e2e;
 }
 
 /* Static */

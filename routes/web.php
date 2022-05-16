@@ -17,8 +17,8 @@ Route::get('/selTopCat/{topCatId}/selCat/{catId}', 'PublicController@showCatalog
 Route::get('/selTopCat/{topCatId}', 'PublicController@showCatalog2')
         ->name('catalog2');
 
-Route::get('/', 'PublicController@showCatalog1')
-        ->name('catalog1');
+Route::get('/', 'PublicController@showOfferte')
+        ->name('offerte');
 
 Route::get('/admin/newproduct', 'AdminController@addProduct')
         ->name('newproduct');
