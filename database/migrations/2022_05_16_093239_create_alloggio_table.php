@@ -15,25 +15,25 @@ class CreateAlloggioTable extends Migration
     {
         Schema::create('alloggio', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->string('Titolo');
+            $table->string('titolo');
             $table->float('prezzo');
             $table->string('descrizione',2500);
-            $table->string('tipologia');
+            $table->string('tipologia')->nullable();
             $table->tinyInteger('n_camere');
             $table->tinyInteger('n_posti_letto_totali');
             $table->dateTimeTz('data_inserimento');
-            $table->date('data_min');
-            $table->date('data_max');
+            $table->date('data_min')->nullable();
+            $table->date('data_max')->nullable();
             $table->string('indirizzo');
             $table->char('cap',5);
             $table->string('città');
             $table->char('provincia',2);
-            $table->char('genere');
-            $table->integer('età_min');
-            $table->integer('età_max');
-            $table->boolean('opzionato');
-            $table->integer('superficie');
-            $table->integer('dimensione_camera');
+            $table->char('genere')->nullable();
+            $table->integer('età_min')->nullable();
+            $table->integer('età_max')->nullable();
+            $table->boolean('opzionato')->default(0);
+            $table->integer('superficie')->nullable();
+            $table->integer('dimensione_camera')->nullable();
         });
     }
 
