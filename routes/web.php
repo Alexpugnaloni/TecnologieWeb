@@ -53,6 +53,11 @@ Route::view('/where', 'where')
 Route::view('/who', 'who')
         ->name('who');
 
+Route::view('/faq', 'faq')
+        ->name('faq');
+
+Route::view('/condizioni', 'condizioni')
+        ->name('condizioni');
 // Rotte inserite dal comando artisan "ui vue --auth" 
 // Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

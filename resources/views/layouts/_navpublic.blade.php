@@ -1,8 +1,10 @@
 <ul>
-    <li><a href="{{ route('catalog1') }}" title="Home">Catalogo</a></li>
+    <li><a href="{{ route('catalog1') }}" title="Home">Offerte</a></li>
     <li><a href="{{ route('who') }}" title="Il nostro profilo aziendale">Chi siamo</a></li>
     <li><a href="{{ route('where') }}" title="Dove trovarci">Dove Siamo</a></li>
     <li><a href="mailto:info@acme.it" title="Mandaci un messaggio">Contattaci</a></li>
+    <li><a href="{{ route('faq') }}" title="Domande frequenti">F.A.Q.</a></li>
+    <li><a href="{{ route('condizioni') }}" title="Condizioni generali d'uso">Condizioni generali d'uso</a></li>
     @can('isAdmin')
         <li><a href="{{ route('admin') }}" class="highlight" title="Home Admin">Home Admin</a></li>
     @endcan
