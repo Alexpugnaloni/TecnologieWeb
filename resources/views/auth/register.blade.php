@@ -77,7 +77,7 @@
             </div>
             
             <label for="gender">
-                Selezione sesso:
+                Seleziona sesso:
             </label>
             
              <div class="wrap-input">
