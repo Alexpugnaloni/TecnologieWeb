@@ -32,7 +32,7 @@ class CreateUtenteTable extends Migration
             $table->integer('età');
             $table->char('genere');
             $table->string('email')->unique();
-            $table->string('cellulare');
+            $table->string('cellulare')->unique();
             $table->string('username',20)->unique();
             $table->string('password');
             $table->string('livello',10)->default('utente');

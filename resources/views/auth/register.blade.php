@@ -76,6 +76,54 @@
                 {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password-confirm']) }}
             </div>
             
+             <div class="wrap-input">
+                <input class="wrap-input-input" type="radio" name="genere" id="genereU1" value="U">
+                     <label class="wrap-input-label" for="genereU1">
+                            Uomo 
+                        </label>
+              </div>
+                    <div class="wrap-input">
+                        <input class="wrap-input-input" type="radio" name="genere" id="genereD1" value="D">
+                            <label class="wrap-input-label" for="genereD1">
+                                Donna
+                            </label>
+                @if ($errors->first('genere'))
+                <ul class="errors">
+                    @foreach ($errors->get('genere') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+                
+             </div>
+            
+             <div class="wrap-input">
+                {{ Form::label('età', 'Età', ['class' => 'label-input']) }}
+                {{ Form::text('età', '', ['class' => 'input', 'id' => 'età']) }}
+                @if ($errors->first('età'))
+                <ul class="errors">
+                    @foreach ($errors->get('età') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+                
+            </div>
+            
+                         <div class="wrap-input">
+                {{ Form::label('numero', 'Numero', ['class' => 'label-input']) }}
+                {{ Form::text('numero', '', ['class' => 'input', 'id' => 'numero']) }}
+                @if ($errors->first('numero'))
+                <ul class="errors">
+                    @foreach ($errors->get('numero') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+                
+            </div>
+            
+            
             <div class="container-form-btn">                
                 {{ Form::submit('Registra', ['class' => 'form-btn1']) }}
             </div>
