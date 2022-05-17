@@ -72,8 +72,8 @@
             </div>
 
             <div  class="wrap-input">
-                {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-input']) }}
-                {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password-confirm']) }}
+                {{ Form::label('conferma password', 'Conferma password', ['class' => 'label-input']) }}
+                {{ Form::password('conferma password', ['class' => 'input', 'id' => 'conferma password']) }}
             </div>
             
              <div class="wrap-input">
