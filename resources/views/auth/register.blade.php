@@ -76,6 +76,10 @@
                 {{ Form::password('conferma password', ['class' => 'input', 'id' => 'conferma password']) }}
             </div>
             
+            <label for="gender">
+                Selezione sesso:
+            </label>
+            
              <div class="wrap-input">
                 <input class="wrap-input-input" type="radio" name="genere" id="genereU1" value="U">
                      <label class="wrap-input-label" for="genereU1">
@@ -123,6 +127,9 @@
                 
             </div>
             
+            <label for="livello">
+                Registrati come:
+            </label>
             
             <div class="wrap-input">
                 <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatore1" value="Le">
