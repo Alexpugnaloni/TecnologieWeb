@@ -2,21 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
-        <title>LaProj5 | @yield('title', 'Catalogo')</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/stile.css') }}" >
+        <title>TrovaCasa.it | @yield('title', 'Homepage')</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
                 <div id="logo">
-                    <h1><a href="">ACME S.p.A  </a></h1>
-                    <p>i migliori prodotti alla portata di un click</p>
+                    <h1><a href="">TrovaCasa.it </a></h1>
+                    <p>Lorem ipsum</p>
                 </div>
             </div>
 
             <!-- end #header -->
             <div id="menu">
-                @include('layouts/_navuser')
+                @include('layouts/_navuser') //cambiare e sistemare rotte
             </div>
 
             <!-- end #menu -->
@@ -32,7 +32,8 @@
             <!-- end #content -->
             <div id="footer">
                 <br>
-                <p>universit&agrave; politecnica delle marche - Esame di  <a href="https://learn.univpm.it/course/view.php?id=7098">tecnologie web</a>.</p>
+                <p>Footer con informazioni generali ed eventuali link</p>
+                <p>Lorem ipsum</p>
             </div>
             <!-- end #footer -->
         </div>
