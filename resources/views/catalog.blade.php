@@ -41,7 +41,7 @@
 <div id="sidebar">
     <ul>
         <li>
-            <h2>Categorie</h2>
+            <h2>Categoria</h2>
             <ul>
                 @foreach ($topCategories as $category)
                 <li><a href="{{ route('catalog2', [$category->catId]) }}">{{ $category->name }}</a><span>{{ $category->desc }}</span></li>
