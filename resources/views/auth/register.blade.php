@@ -4,8 +4,8 @@
 
 @section('content')
 <div class="static">
-    <h3>Registrazione</h3>
-    <p>Utilizza questa form per registrarti al sito</p>
+    <h2><center>Registrazione</center></h2>
+    <p><center>Utilizza questa form per registrarti al sito</center></p>
 
     <div class="container-contact">
         <div class="wrap-contact1">
