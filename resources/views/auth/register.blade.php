@@ -77,19 +77,25 @@
             </div>
             
             <label for="gender">
-                Seleziona sesso:
+                <div class="label-input">
+                    Seleziona sesso: <br>
+                </div>
             </label>
             
              <div class="wrap-input">
                 <input class="wrap-input-input" type="radio" name="genere" id="genereU1" value="U">
                      <label class="wrap-input-label" for="genereU1">
+                         <div class="label-input">
                             Uomo 
+                         </div>
                         </label>
               </div>
                     <div class="wrap-input">
                         <input class="wrap-input-input" type="radio" name="genere" id="genereD1" value="D">
                             <label class="wrap-input-label" for="genereD1">
+                                <div class="label-input">
                                 Donna
+                                </div>
                             </label>
                 @if ($errors->first('genere'))
                 <ul class="errors">
@@ -128,19 +134,25 @@
             </div>
             
             <label for="livello">
-                Registrati come:
+                <div class="label-input">
+                    Registrati come:<br>
+                </div>
             </label>
             
             <div class="wrap-input">
                 <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatore1" value="Le">
                      <label class="wrap-input-label" for="livelloLocatore1">
+                         <div class="label-input">
                             Locatore 
+                         </div>
                         </label>
               </div>
                     <div class="wrap-input">
                         <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatario1" value="Lo">
                             <label class="wrap-input-label" for="livelloLocatario1">
+                                <div class="label-input">
                                 Locatario
+                                </div>
                             </label>
                 @if ($errors->first('genere'))
                 <ul class="errors">
@@ -154,7 +166,7 @@
             
             
             <div class="container-form-btn">                
-                {{ Form::submit('Registra', ['class' => 'form-btn1']) }}
+                {{ Form::submit('Registrati', ['class' => 'form-btn1']) }}
             </div>
             
             {{ Form::close() }}
