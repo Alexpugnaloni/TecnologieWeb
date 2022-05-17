@@ -31,11 +31,21 @@ class CreateAlloggioTable extends Migration
             $table->char('genere')->nullable();
             $table->integer('età_min')->nullable();
             $table->integer('età_max')->nullable();
-            $table->boolean('opzionato')->default(0);
+            $table->tinyInteger('opzionato')->default(0);
             $table->integer('superficie')->nullable();
             $table->integer('dimensione_camera')->nullable();
+            $table->text('immagine')->default('no_home_icon.png');
+            
+ /*           if('opzionato' != 0) {
+            $table->text('immagine')->default('sold_out.png');
+            } else {
+            $table->text('immagine')->default('no_home_icon.png');
+            }*/
         });
+        
     }
+    
+    
 
     /**
      * Reverse the migrations.
