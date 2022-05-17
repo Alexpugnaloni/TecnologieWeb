@@ -182,7 +182,7 @@ a:hover {
 }
 
 #menu a.highlight {
-	color: #e88c8c;
+	color: #FF0000;
 }
 
 #menu a:hover, #menu .current_page_item a {
@@ -458,7 +458,7 @@ a:hover {
 }
 
 .label-input {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-size: 12px;
   color: #555555;
   line-height: 1,5;
@@ -508,7 +508,7 @@ a:hover {
 
 .wrap-contact1 {
   max-width: 300px;
-  background: #dbecf6;
+  background: #FFFFFF;
   border-radius: 2px;
   padding: 30px 30px;
   position: relative;

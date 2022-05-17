@@ -4,16 +4,14 @@
 
 @section('content')
 <div class="static">
-    <h3>Login</h3>
-    <p>Utilizza questa form per autenticarti al sito</p>
+    <h2><center>Login</center></h2>
+    <p><center>Inserisci le tue credenziali, altrimenti <a  href="{{ route('register') }}">registrati</a></center></p>
 
     <div class="container-contact">
         <div class="wrap-contact1">
             {{ Form::open(array('route' => 'login', 'class' => 'contact-form')) }}
             
-             <div  class="wrap-input">
-                 <p> Se non hai già un account <a  href="{{ route('register') }}">registrati</a></p>
-             </div>            
+                       
              <div  class="wrap-input">
                 {{ Form::label('username', 'Nome Utente', ['class' => 'label-input']) }}
                 {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
