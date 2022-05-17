@@ -111,17 +111,39 @@
             </div>
             
                          <div class="wrap-input">
-                {{ Form::label('numero', 'Numero', ['class' => 'label-input']) }}
-                {{ Form::text('numero', '', ['class' => 'input', 'id' => 'numero']) }}
-                @if ($errors->first('numero'))
+                {{ Form::label('cellulare', 'Cellulare', ['class' => 'label-input']) }}
+                {{ Form::text('cellulare', '', ['class' => 'input', 'id' => 'cellulare']) }}
+                @if ($errors->first('cellulare'))
                 <ul class="errors">
-                    @foreach ($errors->get('numero') as $message)
+                    @foreach ($errors->get('cellulare') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
                 @endif
                 
             </div>
+            
+            
+            <div class="wrap-input">
+                <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatore1" value="Le">
+                     <label class="wrap-input-label" for="livelloLocatore1">
+                            Locatore 
+                        </label>
+              </div>
+                    <div class="wrap-input">
+                        <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatario1" value="Lo">
+                            <label class="wrap-input-label" for="livelloLocatario1">
+                                Locatario
+                            </label>
+                @if ($errors->first('genere'))
+                <ul class="errors">
+                    @foreach ($errors->get('genere') as $message)
+                    <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+                @endif
+                
+             </div>
             
             
             <div class="container-form-btn">                
