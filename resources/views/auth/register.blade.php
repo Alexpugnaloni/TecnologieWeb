@@ -12,11 +12,11 @@
             {{ Form::open(array('route' => 'register', 'class' => 'contact-form')) }}
 
             <div  class="wrap-input">
-                {{ Form::label('name', 'Nome', ['class' => 'label-input']) }}
-                {{ Form::text('name', '', ['class' => 'input', 'id' => 'name']) }}
-                @if ($errors->first('name'))
+                {{ Form::label('nome', 'Nome', ['class' => 'label-input']) }}
+                {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome']) }}
+                @if ($errors->first('nome'))
                 <ul class="errors">
-                    @foreach ($errors->get('name') as $message)
+                    @foreach ($errors->get('nome') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -24,11 +24,11 @@
             </div>
 
             <div  class="wrap-input">
-                {{ Form::label('surname', 'Cognome', ['class' => 'label-input']) }}
-                {{ Form::text('surname', '', ['class' => 'input', 'id' => 'surname']) }}
-                @if ($errors->first('surname'))
+                {{ Form::label('cognome', 'Cognome', ['class' => 'label-input']) }}
+                {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
+                @if ($errors->first('cognome'))
                 <ul class="errors">
-                    @foreach ($errors->get('surname') as $message)
+                    @foreach ($errors->get('cognome') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
