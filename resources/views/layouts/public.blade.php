@@ -32,7 +32,8 @@
             <!-- end #content -->
             <div id="footer">
                 <br>
-                <p>universit&agrave; politecnica delle marche - Esame di <a href="https://learn.univpm.it/course/view.php?id=7098">tecnologie web</a>.</p>
+                <p>Footer con informazioni generali ed eventuali link</p>
+                <p>Lorem ipsum</p>
             </div>
             <!-- end #footer -->
         </div>
