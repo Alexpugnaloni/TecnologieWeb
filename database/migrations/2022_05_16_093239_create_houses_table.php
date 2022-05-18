@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAlloggioTable extends Migration
+class CreateHousesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAlloggioTable extends Migration
      */
     public function up()
     {
-        Schema::create('alloggio', function (Blueprint $table) {
+        Schema::create('houses', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('titolo');
             $table->float('prezzo');
@@ -36,10 +36,10 @@ class CreateAlloggioTable extends Migration
             $table->integer('dimensione_camera')->nullable();
             $table->text('immagine')->default('no_home_icon.png');
             
- /*           if('opzionato' != 0) {
-            $table->text('immagine')->default('sold_out.png');
-            } else {
-            $table->text('immagine')->default('no_home_icon.png');
+/*            if (Schema::hasColumn('alloggio', 'opzionato', 0)) {
+                $table->text('immagine')->default('no_home_icon.png');
+            } else if (Schema::hasColumn('alloggio', 'opzionato', '!=', 0)){
+                $table->text('immagine')->default('sold_out.png');
             }*/
         });
         
@@ -54,6 +54,6 @@ class CreateAlloggioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alloggio');
+        Schema::dropIfExists('houses');
     }
 }

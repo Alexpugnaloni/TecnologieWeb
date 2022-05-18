@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     
     public function run() {
 
-        DB::table('alloggio')->insert([
+        DB::table('houses')->insert([
             ['id' => 1, 'titolo' => 'ddddd', 'prezzo' => 280, 'descrizione' => 'Appartamento situato in pieno centro, 250m dalla fermata principale del pullman, a 2 minuti a piedi da piazza Cavour. Presenti due bagni, una cucina e un ampio salone',
                 'tipologia' => null, 'n_camere' => 3, 'n_posti_letto_totali' => 3, 'data_inserimento' => date("Y-m-d H:i:s"),
                 'indirizzo' => 'Via Simeoni, 6', 'cap' => '60121','città' => 'Ancona', 'provincia' => 'AN', 'età_min' => '18', 
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                 'price' => 78.66, 'discountPerc' => 7, 'discounted' => 01, 'image' => 'Ukraine.gif']
         ]);*/
 
-        DB::table('utente')->insert([
+        DB::table('users')->insert([
             ['nome' => 'Admin', 'cognome' => 'Admin', 'età' => 55, 'genere' => 'M', 'email' => 'admin@admin.it', 
                 'cellulare' => '333567890', 'username' => 'adminadmin','password' => 'i4z5zipq', 'livello' => 'admin',],
             ['nome' => 'Luca', 'cognome' => 'Tore', 'età' => 20, 'genere' => 'M', 'email' => 'loca@loca.it', 

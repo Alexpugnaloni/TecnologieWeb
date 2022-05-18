@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMessaggioTable extends Migration
+class CreateServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateMessaggioTable extends Migration
      */
     public function up()
     {
-        Schema::create('messaggio', function (Blueprint $table) {
-            $table->text('testo');
-            $table->boolean('consegnato');
-            $table->boolean('letto');
-            $table->timestamps();
+        Schema::create('services', function (Blueprint $table) {
+            $table->bigIncrements('id')->unsigned();
+            $table->string('nome', 30);
+            $table->boolean('presente');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateMessaggioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messaggio');
+        Schema::dropIfExists('services');
     }
 }
