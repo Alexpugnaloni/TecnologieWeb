@@ -61,3 +61,6 @@ Route::view('/condizioni', 'condizioni')
 // Rotte inserite dal comando artisan "ui vue --auth" 
 // Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+//ROTTE DA FARE PER LOCATORE/LOCATARIO ED ELIMINARE USER

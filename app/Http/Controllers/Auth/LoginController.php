@@ -32,11 +32,13 @@ use AuthenticatesUsers;
      * @var string
      */
     protected function redirectTo() {        
-        $role = auth()->user()->role;
-        switch ($role) {
+        $livello = auth()->utente()->livello;
+        switch ($livello) {
             case 'admin': return '/admin';
                 break;
-            case 'user': return '/user';
+            case 'locatario': return '/locatario';
+                break;
+            case 'locatore': return '/locatore';
                 break;
             default: return '/';
         };
