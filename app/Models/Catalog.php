@@ -4,8 +4,26 @@ namespace App\Models;
 
 use App\Models\Resources\Category;
 use App\Models\Resources\Product;
+use App\Models\Resources\House;
 
 class Catalog {
+
+    public function getAppartamenti() {
+        return House::where('n_camere', '>', 0)
+                ->get();
+    }
+    
+    public function getPostiLettoSingoli() {
+        return House::where('n_camere', 0)
+                -> where('tipologia', 'singolo')
+                -> get();
+    }
+    
+    public function getPostiLettoDoppi() {
+        return House::where('n_camere', 0)
+                -> where('tipologia', 'doppio')
+                -> get();
+    }
 
     public function getTopCats() {
         return Category::where('parId', 0)->get();

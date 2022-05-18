@@ -1,67 +1,42 @@
 @extends('layouts.public')
 
-@section('title', 'Catalogo Prodotti')
+@section('title', 'Catalogo Alloggi')
 
 <!-- inizio sezione prodotti -->
 @section('content')
 <div id="content">
-  @isset($products)
-    @foreach ($products as $product)
+  @isset($houses)
+    @foreach ($houses as $house)
     <div class="prod">
         <div class="prod-bgtop">
             <div class="prod-bgbtm">
                 <div class="oneitem">
                     <div class="image">
-                        @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image])
+                        @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $house->immagine])
                     </div>
                     <div class="info">
-                        <h1 class="title">Prodotto: {{ $product->name }}</h1>
-                        <p class="meta">Descrizione Breve: {{ $product->descShort }}</p>
+                        <h1 class="title">Alloggio: {{ $house->titolo }}</h1>
+                        <p class="meta">Inserito il: {{ $house->data_inserimento }}</p>
+                        <p class="meta">Indirizzo: {{ $house->città }}, {{ $house->cap }}, {{ $house->provincia }}, {{ $house->indirizzo}}</p>
+                        <p class="meta">Superficie: {{ $house->superficie }}</p>
+                        <p class="meta">Numero camere: {{ $house->n_camere }}</p>
                     </div>
                     <div class="pricebox">
-                        @include('helpers/productPrice')
+                        <p> Prezzo:  {{ $house->prezzo }} €</p>
                     </div>
                 </div>
                 <div class="entry">
-                    <p>Descrizione Estesa: {!! $product->descLong !!}</p>
+                    <p>Descrizione Estesa: {!! $house->descrizione !!}</p>
                 </div>
             </div>
         </div>
     </div>
     @endforeach
 
-    <!--Paginazione-->
-    @include('pagination.paginator', ['paginator' => $products])
 
   @endisset()
 </div>
 
-<!-- fine sezione prodotti -->
-
-<div id="sidebar">
-    <ul>
-        <li>
-            <h2>Categoria</h2>
-            <ul>
-                @foreach ($topCategories as $category)
-                <li><a href="{{ route('catalog2', [$category->catId]) }}">{{ $category->name }}</a><span>{{ $category->desc }}</span></li>
-                @endforeach
-            </ul>
-        </li>
-
-        @isset($selectedTopCat)
-        <li>
-            <h2>In {{ $selectedTopCat->name }}</h2>
-            <ul>
-                @foreach ($subCategories as $subCategory)
-                <li><a href="{{ route('catalog3', [$selectedTopCat->catId, $subCategory->catId]) }}">{{ $subCategory->name }}</a><span>{{ $subCategory->desc }}</span></li>
-                @endforeach
-            </ul>
-        </li>
-        @endisset
-    </ul>
-</div>
-<!-- fine sezione laterale -->
 @endsection
 
 

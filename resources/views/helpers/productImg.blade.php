@@ -1,6 +1,6 @@
 @php
         if (empty($imgFile)) {
-            $imgFile = 'default.jpg';
+            $imgFile = 'no_home_icon.png';
         }
         if (null !== $attrs) {
             $attrs = 'class="' . $attrs . '"';

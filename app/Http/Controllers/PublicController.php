@@ -14,13 +14,29 @@ class PublicController extends Controller {
 
     public function showOfferte() {
 
+        //Appartamenti
+        $appartamenti = $this->_catalogModel->getAppartamenti();
+        
+        //Posti Letto Singoli
+        $postiLettoSingoli = $this->_catalogModel->getPostiLettoSingoli();
+        
+        //Posti Letto Doppi
+        $postiLettoDoppi = $this->_catalogModel->getPostiLettoDoppi();
+        
+        return view('catalog')
+//                        ->with('topCategories', $topCats)
+                        ->with('houses', $appartamenti);
+    }       
+
+    public function showCatalog1() {
+
         //Categorie Top
         $topCats = $this->_catalogModel->getTopCats();
         
         //Prodotti in sconto di tutte le categorie, ordinati per sconto decrescente
         $prods = $this->_catalogModel->getProdsByCat($topCats->map->only(['catId']), 2, 'desc', true);
 
-        return view('catalog') //vedere cosa sia
+        return view('catalog')
                         ->with('topCategories', $topCats)
                         ->with('products', $prods);
     }
