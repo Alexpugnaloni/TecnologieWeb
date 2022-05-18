@@ -94,7 +94,7 @@
                         <input class="wrap-input-input" type="radio" name="genere" id="genereD1" value="D">
                             <label class="wrap-input-label" for="genereD1">
                                 <div class="label-input">
-                                Donna
+                              Donna
                                 </div>
                             </label>
                 @if ($errors->first('genere'))
@@ -146,12 +146,12 @@
                             Locatore 
                          </div>
                         </label>
-              </div>
+             </div>
                     <div class="wrap-input">
                         <input class="wrap-input-input" type="radio" name="livello" id="livelloLocatario1" value="Lo">
                             <label class="wrap-input-label" for="livelloLocatario1">
                                 <div class="label-input">
-                                Locatario
+                             Locatario
                                 </div>
                             </label>
                 @if ($errors->first('genere'))
@@ -163,7 +163,6 @@
                 @endif
                 
              </div>
-            
             
             <div class="container-form-btn">                
                 {{ Form::submit('Registrati', ['class' => 'form-btn1']) }}
