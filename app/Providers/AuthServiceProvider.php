@@ -27,7 +27,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('isAdmin', function ($user) {
             return $user->hasRole('admin');
         });
-
+        
+// isLocatario e isLocatore DA DEFINIRE
+        
         Gate::define('isUser', function ($user) {
             return $user->hasRole('user');
         });
