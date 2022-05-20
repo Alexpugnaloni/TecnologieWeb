@@ -19,13 +19,14 @@ class DatabaseSeeder extends Seeder
                 'indirizzo' => 'Via Simeoni, 6', 'cap' => '60121','città' => 'Ancona', 'provincia' => 'AN', 'età_min' => '18', 
                 'superficie' => '150','immagine' => 'app2.jpg']
         ]);
-        
+            
         DB::table('houses')->insert([
             ['id' => 2, 'titolo' => 'Appartamento2', 'prezzo' => 480, 'descrizione' => 'Appartamento situato in pieno centro, 250m dalla fermata principale del pullman, a 2 minuti a piedi da piazza Cavour. Presenti due bagni, una cucina e un ampio salone',
                 'tipologia' => null, 'n_camere' => 4, 'n_posti_letto_totali' => 6, 'data_inserimento' => date("Y-m-d H:i:s"),
                 'indirizzo' => 'Via Marcelletta, 17', 'cap' => '60121','città' => 'Ancona', 'provincia' => 'AN', 'genere' => 'F', 
-                'età_min' => '30', 'superficie' => '250',]
+                'età_min' => '30', 'superficie' => '250']
         ]);
+        
 
 /*          DB::table('product')->insert([
             ['name' => 'NetBook Modello2', 'catId' => 5,
@@ -64,6 +65,12 @@ class DatabaseSeeder extends Seeder
                 'cellulare' => '334567890', 'username' => 'lorelore','password' => 'i4z5zipq', 'livello' => 'locatore',],
             ['nome' => 'Luca', 'cognome' => 'Tario', 'età' => 69, 'genere' => 'M', 'email' => 'lario@lario.it', 
                 'cellulare' => '335567890', 'username' => 'lariolario','password' => 'i4z5zipq', 'livello' => 'locatario',],
+        ]);
+        
+        DB::table('faqs')->insert([
+            ['id' => 1, 'domanda' => 'Domanda 1', 'risposta' => 'Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Phasellus pellentesque. Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.'],
+            ['id' => 2, 'domanda' => 'Domanda 2', 'risposta' => 'Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit. Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt.'],
+            ['id' => 3, 'domanda' => 'Domanda 3', 'risposta' => 'Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Phasellus pellentesque. Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.'],
         ]);
 /*        
         DB::table('category')->insert([

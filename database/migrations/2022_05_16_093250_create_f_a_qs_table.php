@@ -15,8 +15,8 @@ class CreateFAQsTable extends Migration
     {
         Schema::create('faqs', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->string('domanda',50);
-            $table->string('risposta',1000);
+            $table->string('domanda',500);
+            $table->text('risposta',100000);
         });
     }
 
