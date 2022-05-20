@@ -64,3 +64,6 @@ Route::view('/condizioni', 'condizioni')
 
 
 //ROTTE DA FARE PER LOCATORE/LOCATARIO ED ELIMINARE USER
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
